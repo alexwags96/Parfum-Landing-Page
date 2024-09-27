@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow Condensed', sans-serif;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e8a177;
+    padding: 0 85px;
+    z-index: 999;
+}
+.header-inner{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 35px;
+}
+nav ul li:last-child{
+    padding-right: 0;
+}
+nav ul li a{
+    position: relative;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    transition: all ease 0.5s;
+}
+nav ul li a:hover{
+    color: #000;
+}
+nav ul li a::before{
+    position: absolute;
+    content: "";
+    top: -22px;
+    right: 50%;
+    background: url(images/circular-text.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 75px;
+    height: 75px;
+    opacity: 0;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+nav ul li a:hover::before{
+    opacity: 1;
+    transform: rotate(360deg);
+    transition: ease 1.5s;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    padding: 130px 0 0 85px;
+    height: 90vh;
+    background-color: #e8a177;
+    overflow: hidden;
+    border-radius: 0 0 100px 100px;
+}
+.content h1{
+    font-size: 62px;
+    line-height: 72px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+.content p{
+    font-size: 18px;
+    line-height: 32px;
+    font-family: 'Popping',sans-serif;
+}
+.content .text{
+    max-width: 600px;
+}
+.content .img{
+    position: relative;
+    z-index: 9;
+}
+.content .banner-img{
+    margin-right: -165px;
+    margin-top: 125px;
+}
+.content .circular-text{
+    position: absolute;
+    top: 0;
+    right: 95px;
+    z-index: -1;
+    animation: circularText 12s linear infinite;
+}
+@keyframes circularText {
+    to{
+        transform: rotate(-360deg);
+    }
+}
+.products{
+    max-width: 63%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: -100px 0 100px 85px;
+}
+.products .card{
+    width: 285px;
+    border-radius: 16px;
+    box-shadow: 0 10px 50px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    text-align: center;
+}
+.products .img{
+    margin-top: -130px;
+    margin-bottom: 35px;
+    position: relative;
+    transition: all ease 0.5s;
+}
+.products .img:hover{
+    transform: translateY(15px);
+}
+.products .img::before{
+    position: absolute;
+    content: "";
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 107px;
+    height: 14px;
+    background-color: #000;
+    border-radius: 100%;
+    filter: blur(23px);
+}
+.products h6{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #e8a177;
+    margin-bottom: 5px;
+}
+.products h4{
+    font-size: 24px;
+    font-weight: 700;
+}
+.products a{
+    display: inline-block;
+    min-width: 140px;
+    height: 50px;
+    line-height: 45px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration:none ;
+    color: #fff;
+    background-color: #e8a177;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    box-shadow: 0 20px 40px rgb(187 98 45 / 40%);
+    transform: translateY(25px);
+    transition: all ease 0.5s;
+}
+.products a:hover{
+    background-color: #fff;
+    border-color: #e8a177;
+    color: #e8a177;
+    box-shadow: none;
+    transform: translateY(20px);
+}
